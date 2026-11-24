@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,78 +7,478 @@
   <meta name="description" content="Simon Le is a doctoral researcher at Universitat Autònoma de Barcelona working on economic elites, redistribution, and comparative political economy.">
   <meta name="theme-color" content="#f8f9f7">
   <title>Simon Le | Doctoral Researcher</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    :root {--bg:#f8f9f7;--ink:#22332f;--muted:#61716c;--accent:#236e60;--line:#e0e5e0}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.8 'DM Sans',Arial,sans-serif}
-    a{color:var(--accent);text-underline-offset:4px}
-    a:hover{color:#174d43}
-    a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-    .wrap{width:min(880px,calc(100% - 44px));margin:0 auto}
-    header{border-bottom:1px solid var(--line)}
-    .nav{min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-    .wordmark{font-family:'Libre Baskerville',Georgia,serif;color:var(--ink);font-weight:700;text-decoration:none;font-size:17px}
-    nav{display:flex;align-items:center;gap:23px;flex-wrap:wrap}
-    nav a{color:var(--muted);text-decoration:none;font-size:12px;font-weight:600}
-    nav a:hover{color:var(--accent)}
-    .hero{padding:77px 0 73px;max-width:740px}
+    :root {
+      --bg: #f8f9f7;
+      --ink: #22332f;
+      --muted: #61716c;
+      --accent: #236e60;
+      --line: #e0e5e0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.8 'DM Sans', Arial, sans-serif;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: #174d43;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .wrap {
+      width: min(880px, calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .wordmark {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Introduction and profile photo */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      align-items: center;
+      gap: 55px;
+      padding: 77px 0 73px;
+    }
+
+    .hero-content {
+      min-width: 0;
+    }
+
     .profile-photo {
-    float: right;
-    width: 200px;
-    border-radius: 6px;
-    margin: 0 0 20px 30px;
-}
-    .eyebrow{margin:0 0 16px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--accent)}
-    h1,h2{font-family:'Libre Baskerville',Georgia,serif;font-weight:400;letter-spacing:-.9px}
-    h1{font-size:clamp(42px,6vw,58px);line-height:1.23;margin:0 0 17px}
-    .subtitle{font-size:16px;color:var(--muted);line-height:1.65;margin:0 0 21px}
-    .intro{max-width:680px;color:#42534d;margin:0 0 24px;font-size:15px}
-    .hero-links{display:flex;flex-wrap:wrap;gap:13px 27px;font-weight:600;font-size:13px}
-    section{padding:43px 0;border-top:1px solid var(--line)}
-    .section-grid{display:grid;grid-template-columns:166px 1fr;gap:45px}
-    h2{font-size:23px;line-height:1.5;margin:0}
-    .section-body{max-width:630px}
-    .section-body p{margin:0 0 14px}
-    .section-body p:last-child{margin-bottom:0}
-    .interests{color:#40564f}
-    .academic-list{padding:0;margin:0;list-style:none}
-    .academic-list li{padding:0 0 15px;margin:0 0 15px;border-bottom:1px solid var(--line)}
-    .academic-list li:last-child{padding:0;margin:0;border:0}
-    .academic-list strong{display:block;font-weight:600}
-    .academic-list span{display:block;color:var(--muted);font-size:13px}
-    .contact-links{display:flex;gap:10px 23px;flex-wrap:wrap;font-size:13px}
-    .cv-link{font-weight:700}
-    footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:12px}
-    .foot{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between}
-    @media(max-width:650px){.nav{align-items:flex-start;flex-direction:column;gap:8px;padding:15px 0}nav{gap:16px}.hero{padding:53px 0 52px}.section-grid{grid-template-columns:1fr;gap:12px}section{padding:32px 0}h2{font-size:21px}.subtitle{font-size:15px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    h1, h2 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -.9px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 58px);
+      line-height: 1.23;
+      margin: 0 0 17px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0 0 21px;
+    }
+
+    .intro {
+      color: #42534d;
+      margin: 0 0 24px;
+      font-size: 15px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px 27px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* Academic sections */
+
+    section {
+      padding: 43px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 166px 1fr;
+      gap: 45px;
+    }
+
+    h2 {
+      font-size: 23px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .section-body {
+      max-width: 630px;
+    }
+
+    .section-body p {
+      margin: 0 0 14px;
+    }
+
+    .section-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .interests {
+      color: #40564f;
+    }
+
+    .academic-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .academic-list li {
+      padding: 0 0 15px;
+      margin: 0 0 15px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .academic-list li:last-child {
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .academic-list strong {
+      display: block;
+      font-weight: 600;
+    }
+
+    .academic-list span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 10px 23px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .cv-link {
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .foot {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Tablet layout */
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr) 210px;
+        gap: 30px;
+      }
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 650px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 15px 0;
+      }
+
+      nav {
+        gap: 16px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 0 45px;
+      }
+
+      .profile-photo {
+        width: 180px;
+        grid-row: 1;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      section {
+        padding: 32px 0;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header><div class="wrap nav">
-    <a class="wordmark" href="#top">Simon Le</a>
-    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#education">Education</a><a href="#cv">CV</a><a href="#contact">Contact</a></nav>
-  </div></header>
+
+  <header>
+    <div class="wrap nav">
+      <a class="wordmark" href="#top">Simon Le</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main id="top">
-    <div class="wrap"><div class="hero">
-      <img src="profile.png" alt="Simon Le" class="profile-photo">
-      <p class="eyebrow">Political science · Comparative political economy</p>
-      <h1>Simon Le</h1>
-      <p class="subtitle">Doctoral Researcher in Politics, Policies and International Relations<br>Universitat Autònoma de Barcelona</p>
-      <p class="intro">My research examines how economic elites and institutional constraints shape redistributive policy outcomes. My broader interests include partisan politics, welfare states, and comparative political economy.</p>
-      <div class="hero-links"><a href="#research">Research</a><a class="cv-link" href="Simon-Le-CV.pdf" download>Download CV (PDF) ↗</a><a href="mailto:Simon.Le@autonoma.cat">Email</a></div>
-    </div></div>
-    <section id="about"><div class="wrap section-grid"><h2>About</h2><div class="section-body"><p>I am a doctoral researcher in Politics, Policies and International Relations at the Universitat Autònoma de Barcelona. I hold an MSc in Institutions and Political Economy from the University of Barcelona and a BA in Political Science from the University of Washington.</p></div></div></section>
-    <section id="research"><div class="wrap section-grid"><h2>Research</h2><div class="section-body"><p>I study the political and institutional constraints on redistribution, particularly the role of economic elites. My wider research interests include inequality, partisan politics, and welfare states.</p><p class="interests"><strong>Research interests:</strong> Economic elites · Redistribution · Comparative political economy · Inequality · Partisan politics · Welfare states</p><p><strong>Selected previous research:</strong> My master's thesis examined political control and the welfare state in English councils, using a regression discontinuity design at the seat-majority threshold.</p></div></div></section>
-    <section id="education"><div class="wrap section-grid"><h2>Education</h2><div class="section-body"><ul class="academic-list"><li><strong>PhD, Politics, Policies and International Relations</strong><span>Universitat Autònoma de Barcelona · 2026–present</span></li><li><strong>MSc, Institutions and Political Economy</strong><span>University of Barcelona · 2026</span></li><li><strong>BA, Political Science</strong><span>University of Washington · 2024</span></li></ul></div></div></section>
-    <section id="cv"><div class="wrap section-grid"><h2>Curriculum vitae</h2><div class="section-body"><p>My academic CV includes education, research experience, methods, and conference activity.</p><p><a class="cv-link" href="Simon-Le-CV.pdf" download>Download CV (PDF) ↗</a></p></div></div></section>
-    <section id="contact"><div class="wrap section-grid"><h2>Contact</h2><div class="section-body"><p><a href="mailto:Simon.Le@autonoma.cat">Simon.Le@autonoma.cat</a></p><div class="contact-links"><a href="https://www.linkedin.com/in/simon-le-401016243/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://bsky.app/profile/simonple.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a><a href="https://orcid.org/0009-0001-4413-1278" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://www.researchgate.net/profile/Simon-Le-3" target="_blank" rel="noopener noreferrer">ResearchGate</a></div></div></div></section>
+
+    <div class="wrap">
+      <div class="hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            Political science · Comparative political economy
+          </p>
+
+          <h1>Simon Le</h1>
+
+          <p class="subtitle">
+            Doctoral Researcher in Politics, Policies and International Relations
+            <br>
+            Universitat Autònoma de Barcelona
+          </p>
+
+          <p class="intro">
+            My research examines how economic elites and institutional constraints shape redistributive policy outcomes. My broader interests include partisan politics, welfare states, and comparative political economy.
+          </p>
+
+          <div class="hero-links">
+            <a href="#research">Research</a>
+            <a class="cv-link" href="Simon-Le-CV.pdf" download>Download CV (PDF) ↗</a>
+            <a href="mailto:Simon.Le@autonoma.cat">Email</a>
+          </div>
+
+        </div>
+
+        <img
+          src="profile.png"
+          alt="Simon Le"
+          class="profile-photo"
+          width="250"
+          height="250"
+        >
+
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap section-grid">
+        <h2>About</h2>
+
+        <div class="section-body">
+          <p>
+            I am a doctoral researcher in Politics, Policies and International Relations at the Universitat Autònoma de Barcelona. I hold an MSc in Institutions and Political Economy from the University of Barcelona and a BA in Political Science from the University of Washington.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="wrap section-grid">
+        <h2>Research</h2>
+
+        <div class="section-body">
+          <p>
+            I study the political and institutional constraints on redistribution, particularly the role of economic elites. My wider research interests include inequality, partisan politics, and welfare states.
+          </p>
+
+          <p class="interests">
+            <strong>Research interests:</strong>
+            Economic elites · Redistribution · Comparative political economy · Inequality · Partisan politics · Welfare states
+          </p>
+
+          <p>
+            <strong>Selected previous research:</strong>
+            My master's thesis examined political control and the welfare state in English councils, using a regression discontinuity design at the seat-majority threshold.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap section-grid">
+        <h2>Education</h2>
+
+        <div class="section-body">
+          <ul class="academic-list">
+
+            <li>
+              <strong>PhD, Politics, Policies and International Relations</strong>
+              <span>Universitat Autònoma de Barcelona · 2026–present</span>
+            </li>
+
+            <li>
+              <strong>MSc, Institutions and Political Economy</strong>
+              <span>University of Barcelona · 2026</span>
+            </li>
+
+            <li>
+              <strong>BA, Political Science</strong>
+              <span>University of Washington · 2024</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <div class="wrap section-grid">
+        <h2>Curriculum vitae</h2>
+
+        <div class="section-body">
+          <p>
+            My academic CV includes education, research experience, methods, and conference activity.
+          </p>
+
+          <p>
+            <a class="cv-link" href="Simon-Le-CV.pdf" download>
+              Download CV (PDF) ↗
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap section-grid">
+        <h2>Contact</h2>
+
+        <div class="section-body">
+          <p>
+            <a href="mailto:Simon.Le@autonoma.cat">
+              Simon.Le@autonoma.cat
+            </a>
+          </p>
+
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/simon-le-401016243/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+            <a href="https://bsky.app/profile/simonple.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+
+            <a href="https://orcid.org/0009-0001-4413-1278" target="_blank" rel="noopener noreferrer">ORCID</a>
+
+            <a href="https://www.researchgate.net/profile/Simon-Le-3" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer><div class="wrap foot"><span>© <span id="year">2026</span> Simon Le</span><span>Universitat Autònoma de Barcelona</span></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© <span id="year">2026</span> Simon Le</span>
+      <span>Universitat Autònoma de Barcelona</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
